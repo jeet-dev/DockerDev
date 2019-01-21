@@ -28,4 +28,11 @@ docker rm $(docker ps -a -q -f status=exited) # status = exited
 
 docker container prune # remove al stopped containers
 
+# Docker Port Mapping 
+
+docker run -it -d -p 9000:8080 tomcat:8.0
+
+#Docker Logs
+
+docker logs <container id>
 

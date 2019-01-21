@@ -36,3 +36,6 @@ docker run -it -d -p 9000:8080 tomcat:8.0
 
 docker logs <container id>
 
+# Docker Image Layers
+
+![Image Layers](https://github.com/jeet-dev/DockerDev/blob/master/images/image_layers.jpg)

@@ -63,6 +63,3 @@ docker logs <container id>
 Docker history < image > # this command will show the layers of images on the base image.
 
 ```
-
-<img src="https://github.com/jeet-dev/DockerDev/blob/master/images/image_layers.jpg" width="300" height="300">
-

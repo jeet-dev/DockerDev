@@ -38,4 +38,12 @@ docker logs <container id>
 
 # Docker Image Layers
 
+### Know the layer of Docker images
+
+```
+Docker history < image >
+
+``
+
 <img src="https://github.com/jeet-dev/DockerDev/blob/master/images/image_layers.jpg" width="300" height="300">
+

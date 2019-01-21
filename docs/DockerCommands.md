@@ -38,5 +38,4 @@ docker logs <container id>
 
 # Docker Image Layers
 
-![Image Layers](https://github.com/jeet-dev/DockerDev/blob/master/images/image_layers.jpg)
-<img src="https://github.com/jeet-dev/DockerDev/blob/master/images/image_layers.jpg" width="200" height="200">
+<img src="https://github.com/jeet-dev/DockerDev/blob/master/images/image_layers.jpg" width="300" height="300">

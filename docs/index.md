@@ -64,3 +64,7 @@ docker logs <container id>
 Docker history < image > # this command will show the layers of images on the base image.
 
 ```
+## Docker File 
+
+A Docker file is a text docuemnt that contains all the instructions users provided to assemble an image. 
+

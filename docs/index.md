@@ -70,4 +70,21 @@ Docker history < image > # this command will show the layers of images on the ba
 
 A Docker file is a text docuemnt that contains all the instructions users provided to assemble an image. 
 
+
+FROM debian:7.11
+RUN apt-get update 
+RUN apt-get install -y git 
+RUN apt-get install -y vim
+
+
 ```
+## Docker Build 
+
+```
+Docker Build command will build the docker file instructions and create an image with the tag provided.
+
+docker build -t jeetdev0ps/debian:1.0 .
+
+
+```
+

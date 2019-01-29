@@ -76,6 +76,24 @@ RUN apt-get update
 RUN apt-get install -y git 
 RUN apt-get install -y vim
 
+### Each row in the Dockerfile create a new layer of packages. We can reduce this layer with concatenating multiple commands together
+
+
+FROM debian:7.11
+RUN apt-get update && install -y \
+git \
+python \
+vim
+
+### CMD instructions - specifies which commands you want to run when the container starts up. 
+
+FROM debian:7.11
+RUN apt-get update && install -y \
+git \
+python \
+vim
+
+CMD ["echo", "hello World"]
 
 ```
 ## Docker Build 
@@ -84,6 +102,33 @@ RUN apt-get install -y vim
 Docker Build command will build the docker file instructions and create an image with the tag provided.
 
 docker build -t jeetdev0ps/debian:1.0 .
+
+```
+## Docker Cache 
+
+```
+Docker Cache helps to avoid the build time by cofirming the packages in the cache but it can also cause to use outdated version of packages in the image. To confirm that we use the latest version of pacakages used --no-cache=true
+
+docker build -t jeetdev0ps/debian:1.0 . --no-cache=true
+
+```
+
+## Docker COPY | ADD
+
+```
+COPY command copies the local files into container filesytem
+
+FROM debian:7.11
+RUN apt-get update && install -y \
+git \
+python \
+vim
+
+COPY abc.txt /src/abc.txt  
+
+### ADD command - download and add files to the container filesystem
+
+ADD curl -o vue-v2.5.16.js https://cdn.jsdelivr.net/npm/vue/dist/vue.js  /src/.  
 
 
 ```
